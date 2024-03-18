@@ -4,57 +4,207 @@
     padding: 0;
   }
 
+
+
 .formShell{
     width: 300px;
-    height: 270px;
+    /* height: 270px; */
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     /* border: solid 1px red; */
 }
 
 .backInfo{
     display: flex;
     align-items: center;
-    height: 80px;
+    height: 95px;
+    position: relative;
 }
 
-.nameLabel, .numberLabel, .expMonthLabel, .expYearLabel, .cvcLabel{
+.nameLabel, .numberLabel{
     display: flex;
     flex-direction: column;
-    margin-bottom: 20px;
+    margin-top: 20px;
     font-size: 12px;
-}
-
-.nameInput, .numberInput, .expMonthInput, .expYearInput, .cvcInput{
-    height: 30px;
-    width: 100%;
-    border-radius: 5px;
-}
-
-/* .nameInput, .numberInput{
-    width: 100%;
-}
-
-.expMonthInput, .expYearInput{
-    width: 100%;
-} */
-
-.expMonthLabel{
-    margin-right: 10px;
-    width: 20%;
-}
-
-.expYearLabel{
-    margin-right: 20px;
-    width: 20%;
+    color: black;
+    font-weight: bold;
+    font-family: 'Space Grotesk', sans-serif;
 }
 
 .cvcLabel{
-    width: 60%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 18px;
+    font-size: 12px;
+    color: black;
+    font-weight: bold;
+    font-family: 'Space Grotesk', sans-serif;
+    position: relative;
 }
 
-.expMonthLabel, .expYearLabel, .cvcLabel{
-    height: 100%;
-    justify-content: center;
-    align-items: space-between;
+.expDateText{
+    position: absolute;
+    top: 47px;
+    font-size: 12px;
+    color: black;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+    top: 10px;
+}
+
+input{
+    height: 40px;
+    width: 100%;
+    border-radius: 5px;
+    border: solid 1px gray;
+    background-color: white;
+    color: black;
+    font-size: 18px;
+    text-indent: 9px;
+    margin-top: 2px;
+}
+
+input::placeholder{
+    color: hsl(270, 3%, 87%);
+    text-indent: 9px;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.numberInput{
+    margin-bottom: 20px;
+}
+
+
+.expMonthLabel{
+    display: none;
+}
+
+.expYearLabel{
+    display: none;
+}
+
+.expMonthInput{
+    width: 25%;
+    margin-right: 10px;
+}
+
+.expMonthInput::-webkit-inner-spin-button,
+.expMonthInput::-webkit-outer-spin-button,
+.expYearInput::-webkit-inner-spin-button,
+.expYearInput::-webkit-outer-spin-button,
+.cvcInput::-webkit-inner-spin-button,
+.cvcInput::-webkit-outer-spin-button,
+.numberInput::-webkit-inner-spin-button,
+.numberInput::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+} 
+   
+
+.expYearInput{
+    width: 25%;
+    margin-right: 15px;
+}
+
+.cvcLabel{
+    width: 50%;
+    text-align: start;
+}
+
+.submitBtn{
+    width: 100%;
+    height: 45px;
+    font-size: 14px;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.thankYouScreen{
+    width: 300px;
+    height: 338px;
+    display: grid;
+    grid-template-rows: 160px 50px 53px 75px;
+    grid-template-columns: none;
+    /* background-color: blue; */
+}
+
+.thankYouTitle{
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 22px;
+    letter-spacing: 2px;
+    color: black;
+    grid-row: 2/3;
+    align-self: center;
+    font-weight: 500;
+}
+
+.thankYouMsg{
+    font-size: 14px;
+    font-family: 'Space Grotesk', sans-serif;
+    color: hsl(270, 6%, 55%);
+    grid-row: 3/4;
+    /* margin-bottom: 200px; */
+}
+
+.continueBtn{
+    width: 100%;
+    height: 45px;
+    font-family: 'Space Grotesk', sans-serif;
+    grid-row: 4/5;
+    align-self: flex-end;
+    font-size: 14px;
+}
+
+.iconComplete{
+    width: 50px;
+    grid-row: 1/2;
+    align-self: flex-end;
+    justify-self: center;
+    
+}
+
+
+/* HOVER STYLES */
+
+input:hover{
+    border: solid 1px #a64dff
+}
+
+
+.numberInput:hover{
+    border: solid 1px #a64dff
+}
+
+
+
+/* ERROR STYLES */
+
+.blankErrorMsg, .cvcErrorMsg, .nameErrorMsg{
+    color: red;
+    position: absolute;
+    font-size: 12px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+    
+}
+
+.cardNumberErrorMsg{
+    color: red;
+    font-size: 12px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+    position: absolute;
+    top: -20px;
+}
+
+.nameErrorMsg{
+    top: 370px;
+}
+
+.blankErrorMsg{
+    bottom: 5px;
+}
+
+.cvcErrorMsg{
+   top: 63px;
 }
