@@ -1,0 +1,73 @@
+.bodyShell{
+    height: 900px;
+    width: 1400px;
+    background-color: white;
+    display: flex;
+}
+
+.backgroundContent{
+    display: flex;
+    width: 960px;
+    height: 900px;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardFrontImg{
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    width: 447px;
+    height: 245px;
+    background-image: url("../images/bg-card-front.png");
+    position: absolute;
+    top: 400px; /* Adjust position as needed */
+    left: 250px; /* Adjust position as needed */
+  }
+
+  .cardBackImg{
+    width: 447px;
+    height: 245px;
+    background-image: url("../images/bg-card-back.png");
+    position: absolute;
+    top: 680px;
+    left: 330px;
+  }
+
+  .cardBottomSection{
+    display: flex;
+    justify-content: space-around;
+    grid-column: 1/5;
+    grid-row: 5/6;
+  }
+
+  .cvcImg{
+    color: white;
+    position: absolute;
+    top: 110px;
+    right: 50px;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-family: 'Space Grotesk', sans-serif;
+    
+  }
+
+  .cardNameImg{
+    width: 300px;
+    /* padding-right: 50px; */
+    font-size: 12px;
+    justify-self: flex-end;
+    grid-column: 1/2;
+    grid-row: 5/5;
+    text-align: start;
+    text-indent: 20px;
+  }
+
+  .creditCardNumberImg{
+    justify-self: flex-start;
+  }
+
+  .cardExpImg{
+    width: 24px;
+  }

@@ -1,6 +1,6 @@
 import React from "react"
 
-export default function Form(){
+export default function Form(props){
     const [formData, setFormData] = React.useState(
         {
             cardholderName: "",
@@ -49,9 +49,7 @@ export default function Form(){
                 // If a non-numeric character is entered, do not update the state
                 return;
             }
-        }
-        
-        setFormData(prevFormData => {
+        }setFormData(prevFormData => {
             return{
                 ...prevFormData,
                 [name]: value
@@ -109,7 +107,7 @@ export default function Form(){
             setErrorDateLength(true)
             setErrorState(true)
         }
-        else if(formData.expMonth.length === 2 && formData.expYear.length === 2){
+        else if(formData.expMonth.length === formData.expYear.length === 2){
             setErrorState(false)
         }
         if(formData.cvc.trim() === ''){
@@ -143,7 +141,11 @@ export default function Form(){
         }
     }
     const borderStyles = {
-        borderColor: errorNumber ? "red" : "gray"
+        // borderColor: errorNumber ? "red" : "gray"
+        // if(errorNumber){
+        //     borderColor = "red";
+        // }
+        
     }
     return(
     <div>  
@@ -156,8 +158,10 @@ export default function Form(){
             id={id + "-cardholderName"}
             onChange={handleChange}
             className="nameInput"
+            maxLength={30}
             placeholder="e.g. Jane Appleseed"
-            // required
+            style={errorName ? { borderColor: "red" } : {}}
+            
         />
         {errorName && <span className="nameErrorMsg">Please enter name</span>}
         <label className="numberLabel" htmlFor={id + "-cardNumber"}>CARD NUMBER</label>
@@ -170,8 +174,9 @@ export default function Form(){
             className="numberInput"
             placeholder="e.g. 1234 5678 9123 0000"
             maxLength={16}
-            style={borderStyles}
-            // required
+            // style={borderStyles}
+            style={errorNumber ? { borderColor: "red" } : {}}
+           
         />
         
         <section className="backInfo">
@@ -185,7 +190,8 @@ export default function Form(){
                 className="expMonthInput" 
                 placeholder="MM"
                 maxLength={2}
-                // required
+                style={errorMsg ? { borderColor: "red" } : {}}
+                
             />
             {errorNumber && <span className="cardNumberErrorMsg">Please enter the correct card number</span>}
             {errorMsg && <span className="blankErrorMsg">{errorDateLength ? "Please enter correct date" : "Can't be blank"}</span>}
@@ -198,7 +204,8 @@ export default function Form(){
                 className="expYearInput"
                 placeholder="YY"
                 maxLength={2}
-                // required
+                style={errorMsg ? { borderColor: "red" } : {}}
+                
             />
             <label className="cvcLabel" htmlFor={id + "-cvc"}>CVC
                 <input
@@ -210,7 +217,8 @@ export default function Form(){
                     className="cvcInput"
                     placeholder="e.g. 123"
                     maxLength={3}
-                    // required
+                    style={errorCvc ? { borderColor: "red" } : {}}
+                    
                 />
                 {errorCvc && <span className="cvcErrorMsg">{errorCvcLength ? "Please enter the correct cvc" : "Can't be blank"}</span>}
             </label>    
@@ -219,6 +227,21 @@ export default function Form(){
         </section>
         <button onClick={handleClick} className="submitBtn">Confirm</button>
        </form>}
+       <div className="cardFrontImg">
+                <img class="creditCardLogo" src="./images/card-logo.svg" alt="credit card logo"/>
+                {/* <span class="creditCardNumberImg">{formData.cardNumber.length === 0 ? "0000 0000 0000 0000" : formData.cardNumber}</span> */}
+                <span className="creditCardNumberImg">
+                    {formData.cardNumber.length === 0 ? "0000 0000 0000 0000" : formData.cardNumber.replace(/\D/g, '').replace(/(.{4})/g, '$1 ')}
+                </span>
+
+                <div className="cardBottomSection">
+                    <span class="cardNameImg">{formData.cardholderName.length === 0 ? "Jane Appleseed" : formData.cardholderName}</span>
+                    <span class="cardExpImg" >{formData.expYear.length === 0 ? "00/00" : `${formData.expMonth}/${formData.expYear}`}</span>
+                </div>
+        </div>
+        <div className="cardBackImg">
+            <span className="cvcImg">{formData.cvc.length === 0 ? "000" : formData.cvc}</span>
+        </div>
        {submit && <div className="thankYouScreen">
         <img className="iconComplete" src="../images/icon-complete.svg" /> 
         <h1 className="thankYouTitle">THANK YOU!</h1>
