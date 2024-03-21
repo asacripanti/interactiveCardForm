@@ -228,22 +228,22 @@ export default function Form(props){
         <button onClick={handleClick} className="submitBtn">Confirm</button>
        </form>}
        <div className="cardFrontImg">
-                <img class="creditCardLogo" src="./images/card-logo.svg" alt="credit card logo"/>
-                {/* <span class="creditCardNumberImg">{formData.cardNumber.length === 0 ? "0000 0000 0000 0000" : formData.cardNumber}</span> */}
+                <img className="creditCardLogo" src="http://localhost:5173/interactiveCardForm/images/favicon-32x32.png" alt="credit card logo"/>
+               
                 <span className="creditCardNumberImg">
                     {formData.cardNumber.length === 0 ? "0000 0000 0000 0000" : formData.cardNumber.replace(/\D/g, '').replace(/(.{4})/g, '$1 ')}
                 </span>
 
                 <div className="cardBottomSection">
-                    <span class="cardNameImg">{formData.cardholderName.length === 0 ? "Jane Appleseed" : formData.cardholderName}</span>
-                    <span class="cardExpImg" >{formData.expYear.length === 0 ? "00/00" : `${formData.expMonth}/${formData.expYear}`}</span>
+                    <span className="cardNameImg">{formData.cardholderName.length === 0 ? "Jane Appleseed" : formData.cardholderName}</span>
+                    <span className="cardExpImg" >{formData.expYear.length === 0 ? "00/00" : `${formData.expMonth}/${formData.expYear}`}</span>
                 </div>
         </div>
         <div className="cardBackImg">
             <span className="cvcImg">{formData.cvc.length === 0 ? "000" : formData.cvc}</span>
         </div>
        {submit && <div className="thankYouScreen">
-        <img className="iconComplete" src="../images/icon-complete.svg" /> 
+        <img className="iconComplete" src="http://localhost:5173/interactiveCardForm/images/favicon-32x32.png" /> 
         <h1 className="thankYouTitle">THANK YOU!</h1>
         <h2 className="thankYouMsg">We've added your card details</h2>
         <button onClick={handleContinue} className="continueBtn">Continue</button>
