@@ -64,6 +64,6 @@ I created this app with react, I really wanted to focus on the flexibilty that c
 
 - Website - [Alejandro Sacripanti](https://asacripanti.github.io/portfolio/)
 - Frontend Mentor - [@asacripanti](https://www.frontendmentor.io/profile/asacripanti)
-- linkedIn - [](https://www.linkedin.com/in/alejandro-sacripanti-7abaa823a/)
+- linkedIn - (https://www.linkedin.com/in/alejandro-sacripanti-7abaa823a/)
 - Github - https://github.com/asacripanti/
 
