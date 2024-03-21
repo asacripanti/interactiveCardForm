@@ -1,0 +1,141 @@
+@media(max-width: 1270px){
+    .cardFrontImg{
+        bottom: 160px;
+        right: 440px; 
+      }
+      .cardBackImg{
+        top: 230px;
+        right: 335px;
+      }
+}
+
+@media(max-width: 1180px){
+  .backgroundContent{
+    justify-content: flex-end;
+    padding-right: 20px;
+  }
+}
+
+@media(max-width: 975px){
+    .cardFrontImg{
+        bottom: 160px;
+        right: 380px; 
+      }
+      .cardBackImg{
+        top: 230px;
+        right: 385px;
+      }
+}
+
+@media(max-width: 920px){
+    .cardFrontImg{
+        bottom: 160px;
+        right: 320px; 
+        width: 281px;
+        height: 154px;
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+      .cardBackImg{
+        top: 230px;
+        right: 320px;
+        width: 281px;
+        height: 154px;
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+      .creditCardNumberImg{
+        font-size: 18px;
+        padding-left: 35px;
+      }
+      .cardExpImg{
+        font-size: 9.6px;
+      }
+      .cardNameImg{
+        width: 200px;
+        font-size: 8px;
+      }
+      .creditCardLogo{
+        width: 65px;
+      }
+      .cvcImg{
+        top: 66px;
+        right: 45px;
+        font-size: 8px;
+      }
+}
+
+@media(max-width: 690px){
+    .backgroundContent{
+        justify-content: center;
+        padding-right: 0px;
+      }
+      .cardFrontImg{
+        bottom: 455px;
+        right: 120px; 
+      }
+      .cardBackImg{
+        top: -140px;
+        right: 20px;
+      }
+}
+
+@media(max-width: 540px){
+    .bodyShell{
+        flex-direction: column;
+        height: 700px;
+    }
+    .backgroundBanner{
+        width: 100%;
+        height: 70%;
+    }
+    .backgroundContent{
+        width: 100%;
+    }
+    .cardFrontImg{
+        bottom: 350px;
+        right: 60px;
+        z-index: 2;
+    }
+    .cardBackImg{
+        top: -300px;
+    
+    }
+}
+
+@media(max-width:450px){
+    .cardFrontImg{
+        bottom: 340px;
+        right: 60px;
+        width: 224px;
+        height: 123px;
+      }
+      .cardBackImg{
+        top: -230px;
+        right: 30px;
+        width: 224px;
+        height: 123px;
+      }
+      .creditCardNumberImg{
+        font-size: 14px;
+        padding-left: 35px;
+      }
+      .cardExpImg{
+        font-size: 7.6px;
+      }
+      .cardNameImg{
+        width: 160px;
+        font-size: 6.4px;
+      }
+      .creditCardLogo{
+        width: 52px;
+      }
+      .cvcImg{
+        top: 55px;
+        right: 29px;
+        font-size: 6.4px;
+      }
+      .bodyShell{
+        height: 600px;
+    }
+}

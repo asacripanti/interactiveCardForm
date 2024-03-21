@@ -1,3 +1,7 @@
+#root{
+width: 100%;  
+}
+
 .bodyShell{
     height: 900px;
     width: 1400px;
@@ -7,7 +11,7 @@
 
 .backgroundContent{
     display: flex;
-    width: 960px;
+    width: 67%;
     height: 900px;
     justify-content: center;
     align-items: center;
@@ -21,8 +25,10 @@
     height: 245px;
     background-image: url("../images/bg-card-front.png");
     position: absolute;
-    top: 400px; /* Adjust position as needed */
-    left: 250px; /* Adjust position as needed */
+    bottom: 160px;
+    right: 500px;
+    /* top: 400px;  */
+    
   }
 
   .cardBackImg{
@@ -30,8 +36,10 @@
     height: 245px;
     background-image: url("../images/bg-card-back.png");
     position: absolute;
-    top: 680px;
-    left: 330px;
+    top: 230px;
+    right: 395px;
+    /* top: 680px; */
+    /* left: 330px; */
   }
 
   .cardBottomSection{
@@ -64,10 +72,14 @@
     text-indent: 20px;
   }
 
-  .creditCardNumberImg{
-    justify-self: flex-start;
-  }
-
   .cardExpImg{
     width: 24px;
+  }
+
+  .backgroundContentShell{
+    position: relative;
+  }
+
+  .thankYouScreen{
+    height: 320px;
   }

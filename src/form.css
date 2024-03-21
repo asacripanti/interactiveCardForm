@@ -122,9 +122,9 @@ input::placeholder{
 
 .thankYouScreen{
     width: 300px;
-    height: 338px;
+    height: 320px;
     display: grid;
-    grid-template-rows: 160px 50px 53px 75px;
+    grid-template-rows: 142px 50px 53px 75px;
     grid-template-columns: none;
     /* background-color: blue; */
 }

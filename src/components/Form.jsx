@@ -148,7 +148,7 @@ export default function Form(props){
         
     }
     return(
-    <div>  
+    <div className="backgroundContentShell">  
        {!submit && <form className="formShell" onSubmit={handleSubmit}>
         <label className="nameLabel" htmlFor={id + "-cardholderName"}>CARDHOLDER NAME</label>
         <input 

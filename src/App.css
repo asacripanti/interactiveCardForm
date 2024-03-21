@@ -1,9 +1,14 @@
 #root {
-  max-width: 1280px;
+  /* max-width: 1280px; */
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+
 
 .logo {
   height: 6em;
@@ -43,7 +48,7 @@
 
 body{
   /* background-color: white; */
-  width: 1440px;
+  /* width: 1440px; */
   display: flex;
   overflow: hidden;
   background-color: darkgrey;
@@ -59,7 +64,7 @@ body{
 
 .backgroundBanner{
   background-image: url("../images/bg-main-desktop.png");
-  width: 480px;
+  width: 33%;
   height: 900px;
   background-repeat: no-repeat;
 }
@@ -78,6 +83,7 @@ body{
   padding-left: 50px;
   font-family: 'Space Grotesk', sans-serif;
   font-weight: 500;
+  justify-self: flex-start;
 }
 
 /* .cardNameImg{
